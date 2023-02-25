@@ -1,14 +1,14 @@
-import java.io.File;  
-import java.io.FileInputStream;  
-import java.io.FileNotFoundException;  
-import java.io.InputStream;  
-  
-import javax.xml.xquery.XQConnection;  
-import javax.xml.xquery.XQDataSource;  
-import javax.xml.xquery.XQException;  
-import javax.xml.xquery.XQPreparedExpression;  
-import javax.xml.xquery.XQResultSequence;  
-  
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import javax.xml.xquery.XQConnection;
+import javax.xml.xquery.XQDataSource;
+import javax.xml.xquery.XQException;
+import javax.xml.xquery.XQPreparedExpression;
+import javax.xml.xquery.XQResultSequence;
+
 import com.saxonica.xqj.SaxonXQDataSource;  
   
 public class main {  
@@ -27,7 +27,7 @@ public class main {
    }  
   
    private static void execute() throws FileNotFoundException, XQException{  
-      InputStream inputStream = new FileInputStream(new File("courses.xqy"));  
+      InputStream inputStream = new FileInputStream(new File("ex22.xqy"));  
       XQDataSource ds = new SaxonXQDataSource();  
       XQConnection conn = ds.getConnection();  
       XQPreparedExpression exp = conn.prepareExpression(inputStream);  
